@@ -1,0 +1,55 @@
+<style>
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        gap: 5rem;
+    }
+
+  .nav-menu img {
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: large;
+    color: #2d2d2d;
+    gap: 1rem;
+  }
+
+  nav a{
+    display: flex;
+    align-items: center;
+    padding: 5% 7%;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+    color:#2d2d2d
+  }
+
+  nav a:hover{
+    background-color: #7e1212;
+    color: white;
+  }
+
+</style>
+
+<div class="nav-menu">
+    <img
+      width="150"
+      alt="Tgcc Logo"
+      src="assets/Tgcc_logo.png"
+    />
+
+    <nav>
+      <a routerLink="/Create">Create New Employee</a>
+      <a routerLink="/Employees">List Of Employees</a>
+    </nav>
+</div>

@@ -1,0 +1,46 @@
+<style>
+    .title{
+    color: var(--group-color);
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.description{
+    color: var(--group-color);
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.description span{
+    font-weight: bold;
+}
+
+.create-carte{
+    padding: 2% 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+</style>
+
+<div class="create-carte">
+    <h2 class="title">List Of Employees</h2>
+    <p class="description">Here you can find all employees , There is {{count}} Employee</p>
+    <div ng-app="myApp">
+        <div ng-controller="demoController as demo">
+          <h2 class="page-header">Angular ngTable: server-side list</h2>
+          <table ng-table="demo.tableParams" show-filter="true" class="table table-bordered table-striped">
+            <tr ng-repeat="row in $data track by row.id">
+              <td title="'Installation At'" filter="{installationAt: 'text'}" sortable="'installationAt'">{{row.installationAt}}</td>
+              <td title="'Admin Email'" filter="{adminEmail: 'text'}" sortable="'adminEmail'">{{row.adminEmail}}</td>
+              <td title="'Powered By'" filter="{poweredBy: 'text'}" sortable="'poweredBy'">{{row.poweredBy}}</td>
+              <td title="'Powered By Icon'" filter="{poweredByIcon: 'text'}" sortable="'poweredByIcon'">{{row.poweredByIcon}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+</div>

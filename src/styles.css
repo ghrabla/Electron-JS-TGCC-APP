@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    margin: 0;
+}
+
+:root {
+    --input-color: #474747;
+    --input-border: #cecece;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+    --input-border-focus: #4a0b0b;
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #fff2f2;
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #7e1212;
+  }

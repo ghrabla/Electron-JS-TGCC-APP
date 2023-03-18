@@ -1,0 +1,397 @@
+<style>
+/* 
+.form-field {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: #99A3BA;
+  border: 1px solid #CDD9ED;
+  background: #fff;
+  transition: border 0.3s ease;
+}
+.form-field::-moz-placeholder {
+  color: var(--input-placeholder);
+}
+.form-field:-ms-input-placeholder {
+  color: var(--input-placeholder);
+}
+.form-field::placeholder {
+  color: var(--input-placeholder);
+}
+.form-field:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  width: 46%;
+}
+.form-group > label,
+.form-group .form-field {
+  white-space: nowrap;
+  display: block;
+}
+.form-group > label:not(:first-child):not(:last-child),
+.form-group .form-field:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.form-group > label:first-child,
+.form-group .form-field:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.form-group > label:last-child,
+.form-group .form-field:last-child {
+  border-radius: 0 6px 6px 0;
+}
+.form-group > label:not(:first-child),
+.form-group .form-field:not(:first-child) {
+  margin-left: -1px;
+}
+.form-group .form-field {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-group > label {
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #99A3BA;
+  background: #EEF4FF;
+  border: 1px solid #CDD9ED;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group:focus-within > label {
+  color: #fff;
+  background: #678EFE;
+  border-color: #275EFE;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Mukta Malar", Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #F5F9FF;
+}
+body .form-group {
+  max-width: 360px;
+}
+body .form-group:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+ */
+
+form{
+    display: flex;
+    row-gap: 2rem;
+    column-gap: 6rem;
+    flex-wrap: wrap;
+}
+
+
+
+
+.form-field {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border 0.3s ease;
+}
+.form-field::-moz-placeholder {
+  color: var(--input-placeholder);
+}
+.form-field:-ms-input-placeholder {
+  color: var(--input-placeholder);
+}
+.form-field::placeholder {
+  color: var(--input-placeholder);
+}
+.form-field:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  width: 46%;
+}
+.form-group > label,
+.form-group .form-field {
+  white-space: nowrap;
+  display: block;
+}
+.form-group > label:not(:first-child):not(:last-child),
+.form-group .form-field:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.form-group > label:first-child,
+.form-group .form-field:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.form-group > label:last-child,
+.form-group .form-field:last-child {
+  border-radius: 0 6px 6px 0;
+}
+.form-group > label:not(:first-child),
+.form-group .form-field:not(:first-child) {
+  margin-left: -1px;
+}
+.form-group .form-field {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-group > label {
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--group-color);
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group:focus-within > label {
+  color: var(--group-color-focus);
+  background: var(--group-background-focus);
+  border-color: var(--group-border-focus);
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body .form-group {
+  max-width: 360px;
+}
+body .form-group:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.create{
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    transition: all .3s ease;
+    border-radius: 5px;
+    background-color: var(--group-background);
+    padding: 0% 5%;
+    width: 36%;
+    cursor: pointer;
+}
+.create:hover{
+    background-color: var(--group-background-focus);
+    color: var(--group-color-focus);
+    border: 1px solid var(--group-border-focus);
+}
+
+.title{
+    color: var(--group-color);
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.description{
+    color: var(--group-color);
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.description span{
+    font-weight: bold;
+}
+
+.create-carte{
+    padding: 2% 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+</style>
+
+<div class="create-carte">
+    <h2 class="title">Create New Employee</h2>
+    <p class="description">Fill this form to create new employee <span>( All fields is required )</span></p>
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input class="form-field" type="text" id="firstName" name="firstName" />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input class="form-field" type="text" id="lastName" name="lastName" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-field" type="text" id="email" name="email" />
+            <label for="email">@gmail.com</label>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input class="form-field" type="text" id="phone" name="phone" />
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input class="form-field" type="text" id="address" name="address" />
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input class="form-field" type="text" id="city" name="city" />
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input class="form-field" type="text" id="state" name="state" />
+        </div>
+        <div class="form-group">
+            <label for="zip">Zip</label>
+            <input class="form-field" type="text" id="zip" name="zip" />
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input class="form-field" type="text" id="country" name="country" />
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" name="department" class="form-field">
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Finance">Finance</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Operations">Operations</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Legal">Legal</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <select id="jobTitle" name="jobTitle" class="form-field">
+                <option value="IT Manager">IT Manager</option>
+                <option value="IT Support">IT Support</option>
+                <option value="IT Specialist">IT Specialist</option>
+                <option value="IT Analyst">IT Analyst</option>
+                <option value="IT Developer">IT Developer</option>
+                <option value="IT Engineer">IT Engineer</option>
+                <option value="IT Director">IT Director</option>
+                <option value="IT Consultant">IT Consultant</option>
+                <option value="IT Technician">IT Technician</option>
+                <option value="IT Coordinator">IT Coordinator</option>
+                <option value="IT Assistant">IT Assistant</option>
+                <option value="IT Intern">IT Intern</option>
+                <option value="IT Other">IT Other</option>
+                <option value="HR Manager">HR Manager</option>
+                <option value="HR Specialist">HR Specialist</option>
+                <option value="HR Assistant">HR Assistant</option>
+                <option value="HR Director">HR Director</option>
+                <option value="HR Coordinator">HR Coordinator</option>
+                <option value="HR Intern">HR Intern</option>
+                <option value="HR Other">HR Other</option>
+                <option value="Sales Manager">Sales Manager</option>
+                <option value="Sales Specialist">Sales Specialist</option>
+                <option value="Sales Assistant">Sales Assistant</option>
+                <option value="Sales Director">Sales Director</option>
+                <option value="Sales Coordinator">Sales Coordinator</option>
+                <option value="Sales Intern">Sales Intern</option>
+                <option value="Sales Other">Sales Other</option>
+                <option value="Marketing Manager">Marketing Manager</option>
+                <option value="Marketing Specialist">Marketing Specialist</option>
+                <option value="Marketing Assistant">Marketing Assistant</option>
+                <option value="Marketing Director">Marketing Director</option>
+                <option value="Marketing Coordinator">Marketing Coordinator</option>
+                <option value="Marketing Intern">Marketing Intern</option>
+                <option value="Marketing Other">Marketing Other</option>
+                <option value="Finance Manager">Finance Manager</option>
+                <option value="Finance Specialist">Finance Specialist</option>
+                <option value="Finance Assistant">Finance Assistant</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input class="form-field" type="text" id="salary" name="salary" />
+        </div>
+        <div class="form-group">
+            <label for="hireDate">Hire Date</label>
+            <input class="form-field" type="date" id="hireDate" name="hireDate" />
+        </div>
+        <div class="form-group">
+            <label for="terminationDate">Termination Date</label>
+            <input class="form-field" type="date" id="terminationDate" name="terminationDate" />
+        </div>
+        <div class="form-group">
+            <label for="status">Etat Familliale</label>
+            <select id="status" name="status" class="form-field">
+                <option value="Célibataire">Célibataire</option>
+                <option value="Marié">Marié</option>
+                <option value="Divorcé">Divorcé</option>
+                <option value="Veuf">Veuf</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="manager">Manager</label>
+            <select id="manager" name="manager" class="form-field"> 
+                <option value="Monsieur Ayoub Basidi">Monsieur Ayoub Basidi</option>
+                <option value="Monsieur Mohamed Elhaj">Monsieur Mohamed Elhaj</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Matricule">Matricule</label>
+            <input class="form-field" type="text" id="Matricule" name="Matricule" />
+        </div>
+        <button type="submit" class="btn btn-primary create">Create Employee</button>
+    </form>
+</div>
